@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Weekly Report!<%= @user.email %></h1>
+    <p>
+      
+      Report.order("date_trunc('week', published_at) DESC, upvotes DESC").limit(5).pluck("date_trunc('day', published_at)", :upvotes)
+    </p>
+  </body>
+</html>

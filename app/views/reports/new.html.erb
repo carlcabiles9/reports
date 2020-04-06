@@ -1,0 +1,21 @@
+<%= form_for @report, as: :report, url: report_path do |f|  %>
+
+    <div class="form-group">
+        <p>
+        <%= form.label :project %><br>
+        <%= form.select :project_ids, options_from_collection_for_select(Project.all.sort_by(&:name), :id, :name, form.object.subject_ids), {}, include_blank: true, multiple: true, class: "collect-form col-md-12"  %>
+        </p>
+
+        <p>
+        <%= form.label :statement %><br>
+        <%= form.text_field :statement %>
+         </p>
+
+      </div>
+    </div>
+    
+      <div class="row">
+      <div class="col-sm-6">
+        <%= f.submit 'Submit', class: 'btn btn-primary' %>
+      </div>
+    </div>
