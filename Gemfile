@@ -10,7 +10,7 @@ gem 'pg', '>= 0.18', '< 2.0'
 gem 'groupdate'
 gem 'whenever', require: false
 # Use Puma as the app server
-gem 'puma', '~> 4.1'
+gem 'puma', '~> 4.3'
 gem 'sunspot_rails'
 gem 'sunspot_solr'
 # Use SCSS for stylesheets
